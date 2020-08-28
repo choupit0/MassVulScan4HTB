@@ -20,22 +20,21 @@ Launch the script against new machines that under testing and are scheduled to r
 The main steps of the script:
 1) Waiting for host to be online (unreleased machine scheduled to release very soon)
 2) Once online, extremely fast identification of open TCP/UDP ports (masscan)
-3) The result (file) is sorted to gather all ports to be scanned by host
-4) Identification of services and vulnerabilities, multiple sessions (nmap + vulners.nse) in parallel, one session per protocol (TCP/UDP)
-5) Display of (potentially) vulnerable services on the screen at the end of the script
-6) Generation of two reports: a global HTML report will be created containing all the details on the host, and a TXT file to focus on services (potentially) vulnerable with the details
+3) The result (file) is sorted to gather all ports to be scanned to the host
+4) Identification of services and potential vulnerabilities, multiple nmap sessions (+ vulners.nse) in parallel, one per protocol (TCP/UDP)
+6) Reports: a global HTML report will be created containing all the details, a TXT file to focus on services (potentially) vulnerable and standard nmap output(s)
 
 The HTML report uses a bootstrap style sheet (https://github.com/honze-net/nmap-bootstrap-xsl) for more convenience.
 # How to use it?
-All you have to do is indicate the IPv4 to scan:
+All you have to do is indicate the IPv4 address to scan:
 ```
 git clone https://github.com/choupit0/MassVulScan4HTB.git
 cd MassVulScan4HTB
-chmod +x MassVulScan4HTB.sh
-(root user or sudo) ./MassVulScan4HTB.sh [IPv4]
+(chmod +x MassVulScan4HTB.sh)
+root user or sudo ./MassVulScan4HTB.sh [IPv4]
 ```
 The script will scan all the TCP/UDP ports (65535 x2), the speed rate or number of packets per second is set to 1000, and NSE vulners.nse is used.
-The interface is set to "tun0".
+The interface is set to "tun0", the OpenVPN interface.
 # GIF Demo
 ![Example Demo](demo/MassVulScan4HTB_Demo.gif)
 # Some screenshots

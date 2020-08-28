@@ -56,5 +56,7 @@ The script has only been tested on Debian family OS but should work on most Linu
 Note that the advantage of using the NSE vulners.nse script is that it systematically polls the vulners.com site database, so it will be the latest available data. Similarly, the latter performs a ranking and sorting of identified CVEs, the most severe at the top of the list, which is very convenient.
 # Known issues / Limitation
 Concerning SNMP, sometimes UDP port scan doesn't seems correctly working with masscan program. I'm trying to find a solution.
+
 Outside Pwnbox context, masscan doesn't seems correctly working with the OpenVPN connection pack. No solution found.
+
 Compatibility with IPv6 is under testing.

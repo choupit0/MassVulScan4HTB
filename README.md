@@ -3,7 +3,6 @@
 Bash script specially create for the HackTheBox Platform and its web-based parrot linux instance Pwnbox: https://www.hackthebox.eu/home/pwnbox
 This script is a variant of the initial script MassVulScan.sh (https://github.com/choupit0/MassVulScan).
 Launch the script against new machines that under testing and are scheduled to release very soon.
-The Bash script combines the power of the Masscan scanner to find open ports, the efficiency of the Nmap scanner to identify open services and their version, and finally the NSE vulners.nse script to identify potential vulnerabilities (CVEs). An HTML report will be generated containing the result of the analysis as well as a TXT file allowing to focus on the vulnerabilities.
 
 ![Example Menu](screenshots/Menu.PNG)
 

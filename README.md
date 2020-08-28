@@ -5,7 +5,7 @@ Bash script specially create for the HackTheBox Platform and its web-based parro
 This script is a variant of the initial script MassVulScan.sh (https://github.com/choupit0/MassVulScan).
 Launch the script against new machines that under testing and are scheduled to release very soon.
 
-![Example Menu](screenshots/Menu.PNG)
+![Example Menu](screenshots/MassVulScan4HTB_Menu.png)
 
 # Prerequisites
 - Package xsltproc (for the conversion of an XML file to HTML, for the final report)
@@ -38,19 +38,19 @@ The interface is set to "tun0", the OpenVPN interface.
 # GIF Demo
 ![Example Demo]TODO
 # Some screenshots
-![Example Installation](screenshots/MassVulScan4HTB_Installation.PNG)
+![Example Installation](screenshots/MassVulScan4HTB_Installation.png)
 
-![Example Waiting](screenshots/MassVulScan4HTB_Waiting.PNG)
+![Example Waiting](screenshots/MassVulScan4HTB_Waiting.png)
 
-![Example Masscan](screenshots/MassVulScan4HTB_Online_Masscan.PNG)
+![Example Masscan](screenshots/MassVulScan4HTB_Online_Masscan.png)
 
-![Example Nmap](screenshots/MassVulScan4HTB_Nmap.PNG)
+![Example Nmap](screenshots/MassVulScan4HTB_Nmap.png)
 
-![Example EOF](screenshots/MassVulScan4HTB_End.PNG)
+![Example EOF](screenshots/MassVulScan4HTB_End.png)
 
-![Example Vulnerable](screenshots/MassVulScan4HTB_Vulnerable_Host.PNG)
+![Example Vulnerable](screenshots/MassVulScan4HTB_Vulnerable_Host.png)
 
-![Example HTML](screenshots/MassVulScan4HTB_HTML.PNG)
+![Example HTML](screenshots/MassVulScan4HTB_HTML.png)
 # OS Compatibility
 The script has only been tested on Debian family OS but should work on most Linux distributions (except for prerequisites installation).
 # Notes / Tips

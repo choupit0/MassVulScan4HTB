@@ -364,7 +364,7 @@ xsltproc -o "${report_folder}${host}_${date}.html" "${nmap_bootstrap}" nmap-outp
 
 # End of script
 echo -e "${yellow_color}[I] Global HTML report generated:"
-echo -e "${blue_color}${report_folder}${global_report_name}${date}.html${end_color}"
+echo -e "${blue_color}${report_folder}${host}_${date}.html${end_color}"
 echo -e "${yellow_color}[I] Nmap scans:"
 echo -e "${blue_color}$(ls ${report_folder}${host}* | grep -E '(tcp_nmap|udp_nmap)' | grep ${date})${end_color}"
 echo -e "${green_color}[V] Report phase is ended, bye!${end_color}"

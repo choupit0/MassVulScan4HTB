@@ -31,8 +31,8 @@ git clone https://github.com/choupit0/MassVulScan4HTB.git
 cd MassVulScan4HTB
 root user or sudo ./MassVulScan4HTB.sh [IPv4]
 ```
-The script will scan all the TCP/UDP ports (65535 x2), the speed rate or number of packets per second is set to 1000, and NSE vulners.nse is used.
-The interface is set to "tun0", the OpenVPN interface.
+**The script will scan all the TCP/UDP ports (65535 x2), the speed rate or number of packets per second is set to 1000, and NSE vulners.nse is used with Nmap.
+The interface is set to "tun0", the OpenVPN interface.**
 # GIF Demo
 TODO
 # Some screenshots

@@ -15,8 +15,6 @@ Launch the script against new machines that under testing and are scheduled to r
 - NSE script vulners.nse (https://github.com/vulnersCom/nmap-vulners)
 
 **The script will install for you all these prerequisites.**
-
-**I invite you to read the file "requirements.txt" if you have some difficulties.**
 # How the script works?
 The main steps of the script:
 1) Waiting for host to be online (unreleased machine scheduled to release very soon)

@@ -14,7 +14,7 @@ Launch the script against an old or new machines that under testing and are sche
 - Nmap (https://nmap.org)
 - NSE script vulners.nse (https://github.com/vulnersCom/nmap-vulners)
 
-**The script will install for you all these prerequisites.**
+**The script will install for you all these prerequisites ~1 minute.**
 # How the script works?
 The main steps of the script:
 1) Waiting for host to be online (unreleased machine scheduled to release very soon)
@@ -33,6 +33,8 @@ root user or sudo ./MassVulScan4HTB.sh [IPv4]
 ```
 **The script will scan all the TCP/UDP ports (65535 x2), the speed rate or number of packets per second is set to 1000, and NSE vulners.nse is used with Nmap.
 The interface is set to "tun0", the OpenVPN interface.**
+
+**A complete scan + reports takes ~5 minutes**
 # GIF Demo
 TODO
 # Some screenshots

@@ -114,26 +114,26 @@ if [[ ${check_github_status} == "open" ]] && [[ ${check_nmap_status} == "open" ]
 	echo -n -e "${blue_color}\r[-] Installing/upgrading \"Masscan\"...${end_color}" && echo "---- MASSCAN INSTALLATION ---" &>> "${log_file}"
 	mv -f "bin/masscan" "/usr/bin/" &>> "${log_file}"
 	proc_status
-	cd "${temp_folder}"
-	tar -xzf nmap-7.80.tgz &>> "${log_file}"
-	cd "nmap-7.80"
-	echo -n -e "${blue_color}\r[-] Resolving dependencies for \"Nmap\"...${end_color}" && echo "---- DEPENDENCIES FOR NMAP ---" &>> "${log_file}"
-	./configure &>> "${log_file}"
-	proc_status
-	echo -n -e "${blue_color}\r[-] Compiling \"Nmap\" (this may take time)...${end_color}" && echo "---- COMPILING NMAP ---" &>> "${log_file}"
-	make -j"$(nproc)" &>> "${log_file}"
-	proc_status
-	echo -n -e "${blue_color}\r[-] Installing/upgrading \"Nmap\"...${end_color}" && echo "---- NMAP INSTALLATION ---" &>> "${log_file}"
-	make install &>> "${log_file}"
-	proc_status
-	echo -n -e "\r                                                            "
-	echo -n -e "${blue_color}\r[-] Installing/upgrading \"Vulners.nse\"...${end_color}" && echo "---- VULNERS.NSE INSTALLATION ---" &>> "${log_file}"
-	mv -f "${temp_folder}/nmap-vulners/vulners.nse" "/usr/local/share/nmap/scripts/"
-	proc_status
+	#cd "${temp_folder}"
+	#tar -xzf nmap-7.80.tgz &>> "${log_file}"
+	#cd "nmap-7.80"
+	#echo -n -e "${blue_color}\r[-] Resolving dependencies for \"Nmap\"...${end_color}" && echo "---- DEPENDENCIES FOR NMAP ---" &>> "${log_file}"
+	#./configure &>> "${log_file}"
+	#proc_status
+	#echo -n -e "${blue_color}\r[-] Compiling \"Nmap\" (this may take time)...${end_color}" && echo "---- COMPILING NMAP ---" &>> "${log_file}"
+	#make -j"$(nproc)" &>> "${log_file}"
+	#proc_status
+	#echo -n -e "${blue_color}\r[-] Installing/upgrading \"Nmap\"...${end_color}" && echo "---- NMAP INSTALLATION ---" &>> "${log_file}"
+	#make install &>> "${log_file}"
+	#proc_status
+	#echo -n -e "\r                                                            "
+	#echo -n -e "${blue_color}\r[-] Installing/upgrading \"Vulners.nse\"...${end_color}" && echo "---- VULNERS.NSE INSTALLATION ---" &>> "${log_file}"
+	#mv -f "${temp_folder}/nmap-vulners/vulners.nse" "/usr/local/share/nmap/scripts/"
+	#proc_status
 	echo -n -e "\r                                              "
 	echo -n -e "${blue_color}\r[-] Updating the databases...${end_color}" && echo "---- DATABASES UPDATE ---" &>> "${log_file}"
 	updatedb &>> "${log_file}"
-	nmap --script-updatedb &>> "${log_file}"
+	#nmap --script-updatedb &>> "${log_file}"
 	proc_status
 	echo -n -e "${blue_color}\r[-] Removing temporary files and folders...${end_color}" && echo "---- REMOVE TEMP FOLDERS ---" &>> "${log_file}"
 	rm -rf "${temp_folder}" &>> "${log_file}"

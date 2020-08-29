@@ -298,7 +298,7 @@ wait
 
 sleep 2 && tset
 
-echo -e "${green_color}[V] Nmap phase is ended.${end_color}"
+echo -n -e "${green_color}\n[V] Nmap phase is ended.${end_color}\n"
 
 grep -E '(/tcp.*open|^Service.Info)' "${nmap_temp}/${host}_tcp_nmap-output.nmap" 2>/dev/null
 grep -E '(/udp.*open|^Service.Info)' "${nmap_temp}/${host}_udp_nmap-output.nmap" 2>/dev/null

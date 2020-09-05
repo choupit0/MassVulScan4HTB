@@ -4,6 +4,8 @@ Bash script specially create for the HackTheBox Platform and its web-based parro
 
 This script is a variant of the initial script MassVulScan.sh (https://github.com/choupit0/MassVulScan).
 
+Objective is to quickly and efficiently identify all the ports/services (TCP/UDP) available for a box. And it catch known vulnerabilities (CVE) for each of them.
+
 **Launch the script against an old or new machines that under testing and are scheduled to release very soon (few minutes/hours before the Go live).**
 
 ![Example Menu](screenshots/MassVulScan4HTB_Menu.png)

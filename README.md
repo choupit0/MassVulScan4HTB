@@ -63,3 +63,5 @@ Concerning SNMP, sometimes UDP port scan doesn't seems correctly working with ma
 Outside Pwnbox context, masscan doesn't seems correctly working with the OpenVPN connection pack. No solution found.
 
 Compatibility with IPv6 is under testing.
+# TODO
+Automatic installation without interaction.

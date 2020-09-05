@@ -150,12 +150,12 @@ clear
 
 echo -e "${blue_color}[-] Wait for host to be online...please, be patient!${end_color}"
 while ! ping -c1 ${host} &>/dev/null; do
-	echo -n -e "\r                                                                            "
-	echo -n -e "${red_color}\r[X] Host still offline${end_color} - ${yellow_color}$(date)${end_color}"
+	echo -n -e "\r                                                                              "
+	echo -n -e "${red_color}\r[X] Host ${host} still offline${end_color} - ${yellow_color}$(date)${end_color}"
 	sleep 1
 done
 
-echo -e "${green_color}\r[V] Host Found!${end_color} - ${yellow_color}$(date)${end_color}              "
+echo -e "${green_color}\r[V] Host ${host} Found!${end_color} - ${yellow_color}$(date)${end_color}                "
 
 ########################################
 # 2/4 Using Masscan to find open ports #

@@ -304,11 +304,11 @@ grep -E '(/tcp.*open|^Service.Info)' "${nmap_temp}/${host}_tcp_nmap-output.nmap"
 grep -E '(/udp.*open|^Service.Info)' "${nmap_temp}/${host}_udp_nmap-output.nmap" 2>/dev/null
 
 # Verifying vulnerabilities
-vuln_hosts_count="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*CVE-\|VULNERABLE/,/^Nmap/p' | tac ; done | grep "Nmap" | sort -u | grep -c "Nmap")"
-vuln_ports_count="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*CVE-\|VULNERABLE/,/^Nmap/p' | tac ; done | grep -Eoc '(/udp.*open|/tcp.*open)')"
-vuln_hosts="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*CVE-\|VULNERABLE/,/^Nmap/p' | tac ; done)"
-vuln_hosts_ip="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*CVE-\|VULNERABLE/,/^Nmap/p' | tac ; done | grep ^"Nmap scan report for" | cut -d" " -f5 | sort -u)"
-vulnerabilities_count="$(for i in ${nmap_temp}/*.nmap; do grep -E '(CVE-|VULNERABLE)' "$i"; done | wc -l)"
+vuln_hosts_count="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*vulners.com\|VULNERABLE/,/^Nmap/p' | tac ; done | grep "Nmap" | sort -u | grep -c "Nmap")"
+vuln_ports_count="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*vulners.com\|VULNERABLE/,/^Nmap/p' | tac ; done | grep -Eoc '(/udp.*open|/tcp.*open)')"
+vuln_hosts="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*vulners.com\|VULNERABLE/,/^Nmap/p' | tac ; done)"
+vuln_hosts_ip="$(for i in ${nmap_temp}/*.nmap; do tac "$i" | sed -n -e '/|_.*vulners.com\|VULNERABLE/,/^Nmap/p' | tac ; done | grep ^"Nmap scan report for" | cut -d" " -f5 | sort -u)"
+vulnerabilities_count="$(for i in ${nmap_temp}/*.nmap; do grep -E '(vulners.com|VULNERABLE)' "$i"; done | wc -l)"
 
 if [[ ${vuln_hosts_count} != "0" ]]; then
 	echo -e "${red_color}[X] ${vulnerabilities_count} potential vulnerabilitie(s) found.${end_color}"
